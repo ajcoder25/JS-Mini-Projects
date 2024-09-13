@@ -8,23 +8,34 @@ let counter = 0;
 
 const adding = () => {
     resultEl.innerText = counter;
+
 }
 
 
 ///minus
 
+// minusEl.addEventListener('click', () => {
+//     const value = Number(changeEl.value)
+//     counter -= value
+//     adding()
+//     console.log(counter)
+// })
+
+
 minusEl.addEventListener('click', () => {
-    const value = Number(changeEl.value)
-    counter -= value
+
+    counter--
     adding()
-    console.log(counter)
+
+    console.log(counter);
+
+
+
 })
 
 plusEl.addEventListener('click', () => {
-    const value = Number(changeEl.value)
-    counter += value
+    counter++
     adding()
-
     console.log(counter)
 })
 
