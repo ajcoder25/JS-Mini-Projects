@@ -1,12 +1,13 @@
-const minusEl = document.getElementById('minus');  // Corrected
-const plusEl = document.getElementById('plus');    // Corrected
+const minusButton = document.getElementById('minus');  // Corrected
+const plusButton = document.getElementById('plus');    // Corrected
 const resultEl = document.getElementById('Result');
-const changeEl = document.getElementById('change')
+const changeInput = document.getElementById('change')
+const resetButton = document.getElementById('reset')
 
 
 let counter = 0;
 
-const adding = () => {
+const updateResult = () => {
     resultEl.innerText = counter;
 
 }
@@ -14,29 +15,41 @@ const adding = () => {
 
 ///minus
 
+
+
+
 // minusEl.addEventListener('click', () => {
-//     const value = Number(changeEl.value)
-//     counter -= value
+
+//     const changeValue = parseInt(changeInput.value) || 0
+
+//     counter -= changeValue;
+
 //     adding()
-//     console.log(counter)
+
+
+
+
+
 // })
 
-
-minusEl.addEventListener('click', () => {
-
+minusButton.addEventListener('click', () => {
+    const changeValue = parseInt(changeInput.value) || 0;
     counter--
-    adding()
+    counter -= changeValue;
+    updateResult();
+});
 
-    console.log(counter);
-
-
-
-})
-
-plusEl.addEventListener('click', () => {
+plusButton.addEventListener('click', () => {
+    const changeValue = parseInt(changeInput.value) || 0;
     counter++
-    adding()
-    console.log(counter)
-})
+    counter += changeValue;
+
+    updateResult();
+});
 
 
+resetButton.addEventListener('click', () => {
+    counter = 0;
+    changeInput.value = 0;
+    updateResult();
+});
