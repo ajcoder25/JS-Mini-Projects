@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+
+#input-Type {
+    width: 100%;
+}
+
+div input {
+    width: 80%;
+    height: 10%;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+
+
+div .change {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    padding: 1.50rem;
+    background-color: #adad3f;
+    position: relative;
+
+}
+
+div label {
+    font-size: .75rem;
+    position: absolute;
+    top: -.75rem;
+    left: 1rem;
+    background-color: #000;
+    color: #fff;
+    padding: .25rem;
+
+}
+
+#container {
+    margin: 0 auto;
+    width: 80%
+}
